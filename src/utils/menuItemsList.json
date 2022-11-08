@@ -1,0 +1,161 @@
+{
+    "list": [
+        {
+            "id": 1,
+            "title": "",
+            "items": [
+                {
+                    "id": 1,
+                    "name": "Clientes",
+                    "icon":"Person",
+                    "url":"#",
+                    "subitems": [
+                        {
+                            "id": 1,
+                            "name": "Lista de Clientes",
+                            "icon":"DataUsage",
+                            "url":"/clientes"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Alta de Cliente",
+                            "icon":"DataUsage",
+                            "url":"/clientes/nuevo"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Productos",
+                    "icon":"Inventory",
+                    "url":"#",
+                    "subitems": [
+                        {
+                            "id": 1,
+                            "name": "Lista de Productos",
+                            "icon":"DataUsage",
+                            "url":"/productos"
+                            
+                        },
+                        {
+                            "id": 2,
+                            "name": "Compras",
+                            "icon":"DataUsage",
+                            "url":"/productos/compras"
+                            
+                        },
+                        {
+                            "id": 3,
+                            "name": "Precios",
+                            "icon":"DataUsage",
+                            "url":"/productos/precios"
+                            
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Ventas",
+                    "icon":"ShoppingCart",
+                    "url":"#",
+                    "subitems": [
+                        {
+                            "id": 1,
+                            "name": "Cargar Venta",
+                            "icon":"DataUsage",
+                            "url":"/ventas"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Pago de Cuota",
+                            "icon":"DataUsage",
+                            "url":"/ventas/cuotas"
+                        },
+                        {
+                            "id": 3,
+                            "name": "Refinanciación",
+                            "icon":"DataUsage",
+                            "url":"/ventas/refinanciacion"
+                        },
+                        {
+                            "id": 4,
+                            "name": "Anulación",
+                            "icon":"DataUsage",
+                            "url":"/ventas/anulacion"
+                        },
+                        {
+                            "id": 5,
+                            "name": "Registrar Pedido",
+                            "icon":"DataUsage",
+                            "url":"/ventas/pedidos"
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Reportes",
+                    "icon":"BarChart",
+                    "url":"/reportes"
+                },
+                {
+                    "id": 5,
+                    "name": "Gestión",
+                    "icon":"AdminPanelSettings",
+                    "url":"#",
+                    "subitems": [
+                        {
+                            "id": 1,
+                            "name": "Comisiones",
+                            "icon":"DataUsage",
+                            "url":"/gestiones/comisiones"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Cobros",
+                            "icon":"DataUsage",
+                            "url":"/gestiones/cobros"
+                        },
+                        {
+                            "id": 3,
+                            "name": "Liquidaciones",
+                            "icon":"DataUsage",
+                            "url":"/gestiones/liquidaciones"
+                        },
+                        {
+                            "id": 4,
+                            "name": "Otros Egresos",
+                            "icon":"DataUsage",
+                            "url":"/gestiones/egresos"
+                        }
+                    ]
+                },
+                {
+                    "id": 6,
+                    "name": "Configuraciones",
+                    "icon":"MiscellaneousServices",
+                    "url":"#",
+                    "subitems": [
+                        {
+                            "id": 1,
+                            "name": "Usuarios",
+                            "icon":"DataUsage",
+                            "url":"/configuracion/usuarios"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Roles",
+                            "icon":"DataUsage",
+                            "url":"/configuracion/roles"
+                        },
+                        {
+                            "id": 3,
+                            "name": "General",
+                            "icon":"DataUsage",
+                            "url":"/configuracion/general"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
