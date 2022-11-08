@@ -1,0 +1,25 @@
+p{
+  margin: 2px;
+}
+
+.good{
+  color: darkgreen;
+  font-weight: 500;
+}
+
+.bad{
+  color:darkred;
+  font-weight: 500;
+}
+
+.medium{
+  color:darkgoldenrod;
+  font-weight: 500; 
+}
+
+.classicLink{
+  text-decoration: solid;
+  color:blue;
+  cursor: pointer;
+  margin-right: 13px;
+}
