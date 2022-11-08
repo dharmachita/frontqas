@@ -7,11 +7,13 @@ const containerStyle = {
 };
 
 const Map=({lat, lng})=>{
+  // eslint-disable-next-line
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: process.env.REACT_APP_API_MAP
   })
 
+  // eslint-disable-next-line
   const [map, setMap] = React.useState(null)
   
   const center = {
@@ -23,6 +25,7 @@ const Map=({lat, lng})=>{
     const bounds = new window.google.maps.LatLngBounds(center);
     map.fitBounds(bounds);
     setMap(map)
+    // eslint-disable-next-line
   }, [])
 
   const onUnmount = React.useCallback(function callback(map) {
