@@ -23,7 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 #Testing for delete
-/src/utils/testnest.jsx
+#/src/utils/testnest.jsx
 
 #Dev Data
-/src/testdata
+#/src/testdata

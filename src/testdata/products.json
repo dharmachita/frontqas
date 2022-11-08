@@ -1,0 +1,75 @@
+{   
+    "products":[
+        {   
+            "id":"00001",
+            "code":"P00001",
+            "name":"Kit Cocina N° 3",
+            "category":"Cocina",
+            "stock":5,
+            "price":"$20.000,00",
+            "description":"Kit de Cocina compuesto por 6 platos playos, 6 platos hondos, 6 cucharas, 6 cuchillos, 6 tenedores, 1 sartén, 1 olla grande (x litros) y 1 olla chica (x litros)",
+            "img":[
+                {"url":"https://serviconfort-imgs.s3.amazonaws.com/mejores-regalos-para-cocineros-y+(1).jpg"},
+                {"url":"https://serviconfort-imgs.s3.amazonaws.com/mejores-regalos-para-cocineros-y.jpg"}
+            ],
+            "cuotas":[
+                {
+                    "cantidad":6,
+                    "valor":"$4.300,00",
+                    "entrega":0
+                },
+                {
+                    "cantidad":12,
+                    "valor":"$2.800,00",
+                    "entrega":0
+                },
+                {
+                    "cantidad":24,
+                    "valor":"$1.600,00",
+                    "entrega":0
+                }
+            ]
+        },
+        {
+            "id":"00002",
+            "code":"P00002",
+            "name":"Kit Cocina N° 5",
+            "category":"Cocina",
+            "stock":5,
+            "price":"$25.000,00",
+            "description":"",
+            "img":[],
+            "cuotas":[]
+        },
+        {
+            "id":"00003",
+            "code":"P00003",
+            "name":"Kit Cocina N° 7",
+            "category":"Cocina",
+            "stock":5,
+            "price":"$30.000,00",
+            "description":"Kit de Cocina compuesto por 6 platos playos, 6 platos hondos, 6 cucharas, 6 cuchillos, 6 tenedores, 1 sartén, 1 olla grande (x litros) y 1 olla chica (x litros)",
+            "img":[
+                {"url":"https://serviconfort-imgs.s3.amazonaws.com/mejores-regalos-para-cocineros-y+(1).jpg"},
+                {"url":"https://serviconfort-imgs.s3.amazonaws.com/mejores-regalos-para-cocineros-y.jpg"}
+            ],
+            "cuotas":[
+                {
+                    "cantidad":6,
+                    "valor":"$5.300,00",
+                    "entrega":0
+                },
+                {
+                    "cantidad":12,
+                    "valor":"$3.800,00",
+                    "entrega":0
+                },
+                {
+                    "cantidad":24,
+                    "valor":"$2.600,00",
+                    "entrega":0
+                }
+            ]
+        }
+    ]
+}
