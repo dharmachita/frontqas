@@ -1,9 +1,9 @@
-import React,{useCallback,useMemo,useState} from 'react';
+import React,{useCallback,useMemo,useState,useEffect} from 'react';
 import {Box,Paper,Grid} from '@mui/material';
 import { DataGrid, esES, GridActionsCellItem, GridToolbarContainer, GridToolbarExport,gridClasses  } from '@mui/x-data-grid';
 import FeaturedPlayListIcon from '@mui/icons-material/FeaturedPlayList';
 import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
-import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
+//import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import ErrorIcon from '@mui/icons-material/Error';
 import SearchOffIcon from '@mui/icons-material/SearchOff';
 import { alpha, Stack, styled } from '@mui/material';
@@ -11,11 +11,11 @@ import Modal from '../utils/Modal';
 import ImagenesContainer from './ImagenesContainer';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
-import CuotasModal from './CuotasModal';
+//import CuotasModal from './CuotasModal';
 import ResponsiveDialog from './ResponsiveDialog';
 
 //datos de prueba
-import products from '../testdata/products.json';
+//import products from '../testdata/products.json';
 
 const ODD_OPACITY = 0.2;
 
@@ -61,7 +61,7 @@ function CustomToolbar() {
 }
 
 export default function ProductListTable({urlFetch}) {
-    const [data,setData]=useState(products.products);
+    const [data,setData]=useState([]);
     // eslint-disable-next-line
     const [error,setError]=useState(null);
     // eslint-disable-next-line
@@ -73,9 +73,9 @@ export default function ProductListTable({urlFetch}) {
     const contentText=`¿Está seguro que desea eliminar el producto: ${dataConfirm.name}?`
     let endpointDelete=`${process.env.REACT_APP_API_ENDPOINT}products/${dataConfirm.id}`
 
-    console.log(data);
+    //console.log(data);
         
-/*     useEffect(()=>{
+    useEffect(()=>{
       const fetchData=async()=>{
         setLoading(true);
         try{
@@ -97,7 +97,7 @@ export default function ProductListTable({urlFetch}) {
         }
     };
     fetchData();
-    },[urlFetch]); */
+    },[urlFetch]);
 
   const handleDescription = useCallback(
     (params) => () => {
@@ -114,11 +114,12 @@ export default function ProductListTable({urlFetch}) {
       setModal({
         type:1,
         title:"Imágenes del Producto",
-        content:params.row.img          
+        //content:params.row.img
+        content:[]          
       });
       setOpen(true);        
   }, [])
-
+/*
   const handleCuotas = useCallback(
     (params) => () => {
       setModal({
@@ -128,15 +129,15 @@ export default function ProductListTable({urlFetch}) {
       });
       setOpen(true);        
   }, [])
-
+*/
   const handleEditar = useCallback(
     (params) => () => {
-      setModal({
-        type:2,
+      /*setModal({
+        type:3,
         title:"Financiación",
         content:params.row.cuotas          
       });
-      setOpen(true);        
+      setOpen(true);*/        
   }, [])
 
   const handleEliminar = useCallback(
@@ -150,17 +151,18 @@ export default function ProductListTable({urlFetch}) {
   const SwitchDataModal=()=>{
       switch (modal.type) {
         case 0:
-           return (modal.content.length!==0
+           return (modal.content
                     ?<p>{modal.content}</p>
                     :<p>El producto no tiene descripción</p>); 
         case 1:  
            return (modal.content.length!==0
                     ?<ImagenesContainer url={modal.content}/>
                     :<p>El producto no tiene imágenes</p>);                      
-        case 2:
+        /*case 2:
            return (modal.content.length!==0
                     ?<CuotasModal cuotas={modal.content}/>
-                    :<p>El producto no tiene Financiación</p>); 
+                    :<p>El producto no tiene Financiación</p>);
+        */             
         default:
           return "Opción no elegida";
       }
@@ -182,14 +184,29 @@ export default function ProductListTable({urlFetch}) {
         },
         {
           field: 'stock',
-          headerName: 'Stock',
+          headerName: 'Stock Total',
           minWidth: 150
         },
         {
-          field: 'price',
-          headerName: 'Precio Contado',
+          field: 'new',
+          headerName: 'Nuevo',
           minWidth: 150
         },
+        {
+          field: 'used',
+          headerName: 'Usado',
+          minWidth: 150
+        },
+        {
+          field: 'broken',
+          headerName: 'Roto',
+          minWidth: 150
+        },
+        //{
+        //  field: 'price',
+        //  headerName: 'Precio Contado',
+        //  minWidth: 150
+        //},
         {
           field: 'actions',
           type: 'actions',
@@ -205,11 +222,11 @@ export default function ProductListTable({urlFetch}) {
               label="Ver Imágenes"
               onClick={handleImg(params)}
             />,
-            <GridActionsCellItem
-              icon={<MonetizationOnIcon />}
-              label="Cuotas"
-              onClick={handleCuotas(params)}
-            />,
+            //<GridActionsCellItem
+            //  icon={<MonetizationOnIcon />}
+            //  label="Cuotas"
+            //  onClick={handleCuotas(params)}
+            //>,
             <GridActionsCellItem
               icon={<EditIcon />}
               label="Editar"
@@ -222,7 +239,7 @@ export default function ProductListTable({urlFetch}) {
             />,
           ],
         },
-      ],[handleDescription,handleImg,handleCuotas,handleEditar,handleEliminar],
+      ],[handleDescription,handleImg,handleEditar,handleEliminar],
     ); 
 
     return (
