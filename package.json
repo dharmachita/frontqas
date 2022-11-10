@@ -8,6 +8,7 @@
     "@mui/icons-material": "^5.10.6",
     "@mui/material": "^5.10.8",
     "@mui/x-data-grid": "^5.17.6",
+    "@mui/x-data-grid-generator": "^5.17.10",
     "@mui/x-date-pickers": "^5.0.4",
     "@react-google-maps/api": "^2.13.1",
     "@testing-library/jest-dom": "^5.16.5",

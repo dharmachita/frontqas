@@ -1,0 +1,17 @@
+{   
+    "requests":[
+        {
+            "id":1,
+            "codeCustomer":"C003340",
+            "name":"Abel Eduardo Silva",
+            "codeProd":"P00001",
+            "product":"Kit Cocina N° 3",
+            "quantity":2,
+            "deliveryDate":"10/11/2022",
+            "status":"Entregado"
+        }
+    ]
+}
+
+
+
