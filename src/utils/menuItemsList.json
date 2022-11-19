@@ -67,7 +67,7 @@
                         },
                         {
                             "id": 2,
-                            "name": "Pago de Cuota",
+                            "name": "Cobrar Cuota",
                             "icon":"DataUsage",
                             "url":"/ventas/cuotas"
                         },
