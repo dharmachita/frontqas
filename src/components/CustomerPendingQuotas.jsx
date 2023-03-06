@@ -16,6 +16,7 @@ const columns = [
 
 export const CustomerPendingQuotas = ({setDisabledNext,id}) => {
   const [data, setData] = useState([]);
+  // eslint-disable-next-line
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
   const [total, setTotal] = useState(0);
