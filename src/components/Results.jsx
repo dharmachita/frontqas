@@ -3,8 +3,9 @@ import { DataGrid,esES } from '@mui/x-data-grid';
 import { Button, Stack } from '@mui/material';
 import ErrorIcon from '@mui/icons-material/Error';
 import SearchOffIcon from '@mui/icons-material/SearchOff';
+import {Link} from 'react-router-dom';
 
-export default function Results({data,handleNext,setSelected,columns,error,loading,noDataText,newTextButton}) {
+export default function Results({data,handleNext,setSelected,columns,error,noDataText,newTextButton,url}) {
   
   const handleSelect=(newSelectionModel)=>{
     setSelected(newSelectionModel);
@@ -25,7 +26,11 @@ export default function Results({data,handleNext,setSelected,columns,error,loadi
       <Stack height="100%" alignItems="center" justifyContent="center">
         <SearchOffIcon fontSize="large" />
           {noDataText}
-        <Button onClick={()=>alert('Hola')}>{newTextButton}</Button> 
+        <Button 
+          component={Link}
+          to={url}>
+            {newTextButton}
+        </Button> 
       </Stack>
       }
       {
@@ -34,13 +39,12 @@ export default function Results({data,handleNext,setSelected,columns,error,loadi
           rows={data}
           columns={columns}
           pageSize={5}
-          loading={loading}
           error={error}
           rowsPerPageOptions={[5]}
           onSelectionModelChange={(newSelectionModel) => {
             handleSelect(newSelectionModel);
           }}
-          localeText={esES.components.MuiDataGrid.defaultProps.localeText}        
+          localeText={esES.components.MuiDataGrid.defaultProps.localeText}       
         />
       }
     </div>

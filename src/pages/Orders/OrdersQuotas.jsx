@@ -9,8 +9,6 @@ const OrdersQuotas = () => {
             <Box sx={{display:'flex', justifyContent:'center'}}>
               <QuotaContainer />
             </Box>
-            
-
         </div>
      );
 }

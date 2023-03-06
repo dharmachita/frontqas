@@ -58,7 +58,7 @@ const CustomerDetail = ({data}) => {
                       ?<ImagenesContainer url={imgs}/>
                       :<p>El cliente no tiene fotos del domicilio</p>);                      
           case 2:
-            return (datos.reference.length!==0
+            return (datos.reference
                       ?<p>{datos.reference}</p> 
                       :<p>El cliente no tiene registro de ubicación</p>);
           default:

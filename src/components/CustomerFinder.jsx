@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import {OutlinedInput,InputAdornment,IconButton,FormControl} from '@mui/material';
+import CircularProgress from '@mui/material/CircularProgress';
 import SearchIcon from '@mui/icons-material/Search';
 import { Stack } from '@mui/system';
 import Results from './Results';
@@ -52,7 +53,7 @@ export default function CustomerFinder({handleNext,setSelected}){
         || (val.dni&&val.dni.toLocaleLowerCase().includes(search.toLocaleLowerCase())) )
   
     return (
-        <Stack>
+        <Stack sx={{ alignItems:'center' }}>
         <FormControl sx={{ m: 1, width: '50ch' }} variant="outlined">
             <OutlinedInput
                 placeholder="Buscar por Nombre, DNI o Código" 
@@ -73,17 +74,19 @@ export default function CustomerFinder({handleNext,setSelected}){
             />
         </FormControl>
         {search.length>=5&&
-        <div>
+        <div style={{ height: 400, display:'flex', alignItems:'center'}}>
+            {loading?
+            <CircularProgress />:
             <Results 
                 data={results} 
                 handleNext={handleNext} 
                 setSelected={setSelected} 
                 columns={columns} 
-                loading={loading} 
                 error={error}
                 noDataText='Cliente No Encontrado'
                 newTextButton='Crear Cliente'
-            />
+                url='/clientes/nuevo'
+            />}
         </div>
         }
         </Stack>

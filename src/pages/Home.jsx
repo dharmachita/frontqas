@@ -1,6 +1,7 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
+import AskConfirmationBeforeSave from '../testdata/test';
 
 const Home = () => {
     return ( 
@@ -40,6 +41,7 @@ const Home = () => {
                 </Paper>
               </Grid>
         </Grid>
+        <AskConfirmationBeforeSave />
         </div>
      );
 }

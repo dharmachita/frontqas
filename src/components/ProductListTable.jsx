@@ -3,7 +3,6 @@ import {Box,Paper,Grid} from '@mui/material';
 import { DataGrid, esES, GridActionsCellItem, GridToolbarContainer, GridToolbarExport,gridClasses  } from '@mui/x-data-grid';
 import FeaturedPlayListIcon from '@mui/icons-material/FeaturedPlayList';
 import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
-//import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import ErrorIcon from '@mui/icons-material/Error';
 import SearchOffIcon from '@mui/icons-material/SearchOff';
 import { alpha, Stack, styled } from '@mui/material';
@@ -11,11 +10,7 @@ import Modal from '../utils/Modal';
 import ImagenesContainer from './ImagenesContainer';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
-//import CuotasModal from './CuotasModal';
 import ResponsiveDialog from './ResponsiveDialog';
-
-//datos de prueba
-//import products from '../testdata/products.json';
 
 const ODD_OPACITY = 0.2;
 
@@ -72,9 +67,7 @@ export default function ProductListTable({urlFetch}) {
     const [dataConfirm,setDataConfirm]=useState({});
     const contentText=`¿Está seguro que desea eliminar el producto: ${dataConfirm.name}?`
     let endpointDelete=`${process.env.REACT_APP_API_ENDPOINT}products/${dataConfirm.id}`
-
-    //console.log(data);
-        
+       
     useEffect(()=>{
       const fetchData=async()=>{
         setLoading(true);
@@ -202,11 +195,6 @@ export default function ProductListTable({urlFetch}) {
           headerName: 'Roto',
           minWidth: 150
         },
-        //{
-        //  field: 'price',
-        //  headerName: 'Precio Contado',
-        //  minWidth: 150
-        //},
         {
           field: 'actions',
           type: 'actions',
